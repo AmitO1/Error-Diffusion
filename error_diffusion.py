@@ -3,7 +3,7 @@ import scipy
 from PIL import Image
 
 
-image = Image.open("/Users/amitomer/Desktop/Projects/Graphics/gray_gandalf.jpeg")
+image = Image.open("/Users/amitomer/Desktop/Projects/Graphics/eifel.jpeg")
 image = image.convert('L')
 image_matrix = np.array(image)
 
@@ -56,6 +56,6 @@ for i in range(row):
                 image_matrix[i+1][j] = min(255,current_value2 + current_error/3)
                 image_matrix[i+1][j+1] = min(255,current_value3 + current_error/3)
 
-
+print(image_matrix)
 out_image = Image.fromarray(image_matrix)
-out_image.save('gray_gandald_dif.jpeg')
+out_image.save('eifel_dif.jpeg')
